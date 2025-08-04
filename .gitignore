@@ -2,19 +2,20 @@
 tts-env/
 .venv/
 
-# Python caches
+# Python cache
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Distribution/build files
+# Compiled files
+*.pyo
+*.pyd
+
+# Build/Distribution files
 *.egg-info/
 dist/
 build/
 
-# Byte-compiled / optimized / DLL files
-*.pyo
-*.pyd
-
-# Env files
+# Environment variables
 .env
+.Python
