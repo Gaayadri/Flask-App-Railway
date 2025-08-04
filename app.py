@@ -32,12 +32,12 @@ import torchaudio
 import torch
 
 # Add required globals for safe unpickling
-torch.serialization.add_safe_globals([
-    XttsConfig,
-    XttsAudioConfig,
-    BaseDatasetConfig,
-    XttsArgs
-])
+# torch.serialization.add_safe_globals([
+#     XttsConfig,
+#     XttsAudioConfig,
+#     BaseDatasetConfig,
+#     XttsArgs
+# ])
 
 # Load environment variables
 load_dotenv()
