@@ -1,0 +1,252 @@
+[
+  {
+    "keywords": [
+    "hi", "hello", "hey", "hiya", "good day", "howdy", "hey there", "hi there",
+    "hello there", "good morning", "good afternoon", "good evening",
+    "hi!", "hello!", "hey!", "hi owndays", "is anyone there?"
+  ],
+    "answer": "Hello and welcome to OWNDAYS! How can I assist you today?"
+  },
+  {
+    "keywords": [
+      "eye check-up", "eye checkup", "eye test", "eye testing", "can I test my eyes", "check eyes", "do you do eye check", 
+      "do you check eyes", "do u check eyes", "want eye check", "i need eye test", "test my eyes", "get eyes tested", 
+      "eye examination", "vision test", "eye check", "eye chekup", "can i check my vision", "do u do vision test"
+    ],
+    "answer": "Yes we do. Please approach our friendly staff to arrange for a check-ups."
+  },
+  {
+    "keywords": [
+      "how long eye test", "eye test duration", "time for eye test", "eye test take how long", "how much time eye test", 
+      "how long does an eye test take", "how long is the eye exam", "duration of eye test", "eye exam time", 
+      "does eye test take long", "time needed for eye test", "how long will it take to check eyes", "eye test timing"
+    ],
+    "answer": "Approximately 10-15 minutes. Please approach our friendly staff to do the eye test."
+  },
+  {
+    "keywords": [
+      "appointment for eye test", "need appointment for eye check", "book eye test", "eye test booking", 
+      "can i walk in for eye test", "do i need appointment", "walk in eye test", "book appointment eye check", 
+      "can i come without appointment", "eye test no appointment", "make appointment for eye test", "eye test walkin", 
+      "eye test reserve slot", "do i need to book eye test", "should i book eye check", "booking eye checkup"
+    ],
+    "answer": "No, Walk-ins are welcome. However, if you have a preferred time, you can book in advance at our website. www.owndays.com to book the appointment."
+  },
+  {
+    "keywords": [ 
+      "kind of frames", "what frames", "types of frames", "frame styles", "what kind of frames do you have", 
+      "do you have metal frames", "plastic frames available", "lightweight frames", "stylish frames", 
+      "trendy frames", "classic frames", "frames design", "frame variety", "any fashionable frames", 
+      "glasses frame styles", "frame options", "frame choices", "latest frame trends", "can i see frame collection", 
+      "what sort of frames", "wat frame u have", "do u sell frame styles"
+    ],
+    "answer": "We offer a diverse selection, from classic styles to the latest trends, from lightweight, metal to plastic frames. Please check with our friendly service staffs for further assistance."
+  },
+  {
+    "keywords": [
+      "brands", "brand do you carry", "what brands", "owndays air", "owndays sun", "do you have own brand", 
+      "available brands", "what kind of brands", "popular brands", "brand options", "best seller brand", 
+      "which brand is good", "brand types", "house brands", "your frame brands", "owndays signature brand", 
+      "style brand", "trendy brand", "do you sell owndays brand", "any famous brand", "wat brand u got"
+    ],
+    "answer": "Our Best Seller Brand are Owndays Air and Owndays Sun. We also have our classic, style and trendy brands. Please approach our friendly staffs for further details and assistance."
+  },
+  {
+    "keywords": [
+      "best lens", "what lens is best", "which lens should I choose", "lens for me", "recommend lens", 
+      "which lens do you suggest", "what type of lens should i pick", "lens options", "lens recommendation", 
+      "help me choose lens", "single vision lens", "lens for blue light", 
+      "good lens for reading", "lens for computer work", "lens for outdoor", "which is best lens", 
+      "suggest me best lens", "can you recommend lens", "wat lens is suitable"
+    ],
+    "answer": "The best lens for you really depends on your lifestyle. We have options like single vision, progressive lenses, blue light protection and more. Please approach our friendly staffs to explore the options to find the perfect fit for you!"
+  },
+  {
+    "keywords": [ 
+      "blue light lenses", "do you have blue light", "blue light protection", "blue light glasses", 
+      "glasses for computer use", "screen protection glasses", "glasses for phone use", 
+      "filter blue light", "lens for eye strain", "do u have blue light", "blu light lenses", 
+      "lens for laptop", "anti blue light", "lens reduce screen glare", "blue ray filter", 
+      "blue blocking lenses", "do you sell blue light lenses"
+    ],
+    "answer": "Yes, we do. Blue light lenses are great for reducing eye strain from screens, especially if you're on your devices a lot. They filter up to 40% of blue light. Please approach our friendly staff for more details."
+  },
+  {
+    "keywords": [
+      "transition lenses", "photochromic lenses", "glasses for sun and indoors", 
+      "darken in sunlight", "clear indoor glasses", "glasses that change in sun", 
+      "glasses with tint", "sun adaptive lenses", "color changing glasses", 
+      "day night glasses", "uv sensitive lenses", "do you sell transition lenses", 
+      "photo lens", "auto tint lenses", "tinted lenses", "lens for both indoor outdoor", 
+      "glasses for bright light", "shaded lenses"
+    ],
+    "answer": "Definitely! We have transition lenses that darken in the sun and clear indoors. They provide convenience by acting as both regular glasses and sunglasses AND we have in total 7 types of color shades! Please approach our friendly staff for more details on what is suitable for you."
+  },
+  {
+    "keywords": 
+    ["anti-glare", "uv protection lenses", "do you offer anti-glare", "glare free lenses", 
+      "glare coating", "anti reflective coating", "uv lens", "glasses for night driving", 
+      "lens with no glare", "uv coated lenses", "anti-glare for screen use", 
+      "non reflective glasses", "uv protection", "uv blocking glasses", 
+      "glasses that block sunlight", "no glare glasses", "eye strain glasses", 
+      "lens for screen protection"
+    ],
+    "answer": "Yes! Our lenses come with 99.9% UV protection. We also offer anti-glare coatings for clearer vision and water-repellent coatings, especially for night driving and screen use. Please approach our friendly staff for assistance."
+  },
+  {
+    "keywords": ["change to progressive lenses", "can i upgrade to progressive lenses", "switch from single vision to progressive","convert glasses to progressive",
+    "progressive lens upgrade", "change single vision to progressive", "upgrade my lenses", "progressive upgrade fee", "progressive lens pricing", 
+    "get multifocal lenses", "add progressive lens", "change my lenses to bifocal", "is it possible to change to progressive", "can i get progressive lenses instead",
+    "can i change my vision type", "switch lens type to progressive"
+    ],
+    "answer": "Yes it is possible. Additional fee from S$100.00 will apply. Please check with our friendly staffs for further details."
+  },
+
+  {
+    "keywords": [
+      "how much", "glasses cost", "price of glasses", "what is the price", 
+      "how much are the specs", "what's the cost", "price range for glasses", 
+      "what is your cheapest glasses", "pricing for eyewear", "price for lens and frame", 
+      "how much do glasses start from", "affordable glasses", "glasses under 100", 
+      "cost for specs", "what's the rate", "glasses pricing", "price inquiry", 
+      "how much is your frame", "glasses budget", "wat is ur price"
+    ],
+    "answer": "Our glasses start from $98, which includes the frame and standard lenses. The lenses come with anti-glare and UV protection and can be made thinner for added comfort and aesthetics. Please approach our friendly staff for assistance."
+  },
+  {
+    "keywords": [
+      "promotions", "ongoing promotions", "any discounts", "current offers", 
+      "second pair discount", "promo now", "do you have promo", "buy one get one", 
+      "BOGO", "discount available", "sales today", "is there any offer", 
+      "promotion today", "promo code", "current sales", "do u have any deal", 
+      "special discount", "what's the promotion", "any price cut", "offer available"
+    ],
+    "answer": "Yes! Right now we have 50% off on your second pair. You can even share this deal with family or friends! Please approach our friendly staff for assistance."
+  },
+  {
+    "keywords": [
+      "payment", "payment modes", "how can I pay", "accept cash", 
+      "credit card", "nets", "do you take cards", "can I pay by cash", 
+      "payment method", "debit card", "do u accept card", "scan pay", 
+      "how to make payment", "e-wallet", "pay using phone", "can I use paywave", 
+      "payment options", "do you accept nets", "can i use credit card"
+    ],
+    "answer": "We accept Cash, credit cards and NETS. For other payment modes, please check with our friendly service staff."
+  },
+  {
+    "keywords": [
+      "instalment plan", "payment plans", "atome", "flexible payment", 
+      "pay later", "split payment", "monthly payment", "buy now pay later", 
+      "installment available", "do you offer installments", "do u accept atome", 
+      "can I pay in 3", "flexipay", "interest free payment", "staggered payment", 
+      "do you support installment", "part payment", "is atome accepted"
+    ],
+    "answer": "Yes! We offer flexible payment options through Atome. If you’d like more details on how it works, please approach our friendly staffs for further details."
+  },
+  {
+    "keywords": [
+  "how long to get glasses", "how long will it take to get my glasses", "when will i get my glasses",
+  "how fast can i get my specs", "glasses ready time", "when will glasses be ready", 
+  "how soon can i collect my glasses", "when can i collect my specs", "can i get glasses same day",
+  "delivery time", "how fast to collect specs", "when can i get glasses", 
+  "ready in 20 mins", "pickup time for glasses", "lead time for glasses", 
+  "how long it takes", "collection time", "can i get it today", 
+  "same day glasses", "how long will it take", "delivery for glasses", 
+  "delivery duration", "urgent glasses", "turnaround time", 
+  "glasses processing time", "do i get my glasses today", 
+  "can collect today", "can get glasses immediately", "how long for glasses to be ready", "how long does it to get my glasses"
+],
+  "answer": "Usually ready in about 20 minutes for clear and blue light lenses, but may take longer depending on your prescription. For other lenses like progressives, transitions, color lenses or special prescriptions, it usually takes 7 to 14 working days. Please check with our friendly service staffs for details."
+  },
+  {
+    "keywords": [
+      "fix broken glasses", "repair glasses", "broken frame", "nose pad replacement", 
+      "fix specs", "repair my specs", "glasses arm broken", "glasses leg loose", 
+      "glasses came off", "nose support broken", "can you fix my glasses", 
+      "loose hinge", "replace nose pads", "glasses broken", "broken screw", 
+      "frame damage", "repair available", "can you fix this", "fixing glasses", 
+      "glasses repair service"
+    ],
+    "answer": "We can help with basic repairs like nose pad replacements and adjustments. Bring them in, and we’ll take a look!"
+  },
+  {
+    "keywords": [ 
+      "adjust glasses", "glasses loose", "glasses tight", "can you adjust",
+      "loose specs", "tight specs", "adjust my specs", "fix fitting",
+      "can i get adjustment", "free adjustment", "glasses fitting issue",
+      "can you tighten glasses", "adjustment available", "specs too tight",
+      "can u adjust my glasses", "do you fix loose frame", "my glasses keep falling"
+    ],
+    "answer": "Of course! We offer free adjustments to ensure a perfect fit without any purchase."
+  },
+  {
+    "keywords": [ 
+      "sell contact lenses", "do you sell contact lenses", "available contact lenses",
+      "buy contact lens", "can i get contact lenses", "do u sell lens",
+      "contact lens available", "contacts available", "do you sell eye contacts",
+      "can I purchase contacts", "contact lenses purchase", "do you carry lenses"
+    ],
+    "answer": "Yes, only at selected outlets. Please check with our friendly service staffs."
+  },
+  {
+    "keywords": [ 
+  "where do your contact lenses come from", "where are your contact lenses from",
+  "contact lens origin", "where are your lenses made", "do your lenses come from singapore or korea",
+  "are your contact lenses from korea", "contact lens from korea", 
+  "lens country of origin", "imported contact lenses", "which country are lenses from",
+  "lens made in singapore", "contact lenses supplier", "origin of contact lenses", 
+  "are your lenses imported", "where do you import lenses from"
+  ],
+    "answer": "We have both Singapore and Korea import."
+  },
+  {
+    "keywords": [ 
+      "types of contact lenses", "daily lenses", "monthly lenses",
+      "do you have weekly lenses", "lens options", "lens types",
+      "do you have 1-day lens", "30-day lenses", "what kinds of contact lenses",
+      "what types of lenses available", "daily vs monthly contacts",
+      "which lens type do you sell", "lens duration"
+    ],
+    "answer": "We have both daily and monthly contact lenses. Please approach our friendly staffs for further details."
+  },
+   {
+    "keywords": [ 
+      "sunglasses uv protection", "uv sunglasses", "polarized sunglasses", "do your sunglasses have uv",
+      "sunglasses with uv", "uv block sunglasses", "sun protection glasses", "are your sunglasses polarized",
+      "glare reduction sunglasses", "do your glasses protect from sun", "polarised shades",
+      "uv resistant sunglasses", "sun blocking lenses", "glasses for outdoor sun",
+      "do sunglasses block uv rays", "uv protection shades"  
+    ],
+    "answer": "Yes, our sunglasses have UV protection! We offer two types: one with 99% UV block for outdoor wear and another with polarized lenses that reduce glare, enhancing visual comfort, contrast and clarity. Please approach our friendly service staff for assistance."
+  },
+  {
+    "keywords": [
+      "warranty for glasses", "do you offer warranty", "glasses warranty policy",
+      "is there warranty", "warranty on specs", "do i get warranty", "glasses covered",
+      "frame warranty", "lens warranty", "does it come with warranty",
+      "do u have warranty", "warranty terms", "how long is the warranty",
+      "warranty included", "warranty info", "warranty available"
+    ],
+    "answer": "Yes! Our frames come with a one-year warranty for manufacturing defects. Lenses also have a vision warranty, which includes one free replacement if your prescription changes. Please check with our friendly service staffs for assistance."
+  },
+  {
+    "keywords": [ 
+      "lost warranty card", "warranty still valid", "is glasses still covered",
+      "i lost my warranty", "can i claim warranty", "no warranty card",
+      "lost card for warranty", "forgot warranty slip", "do i still have warranty",
+      "is warranty claim possible", "warranty valid without card"  
+    ],
+    "answer": "Yes your glasses are still covered. Please check with our friendly service staff for assistance." 
+  },
+  {
+    "keywords": [ 
+      "after-sales service", "post purchase support", "services after buying",
+      "adjustments", "lens cleaning", "nose pad replacement", "tighten screws",
+      "support after buying", "do you provide cleaning", "free adjustment after buying",
+      "what happens after purchase", "post sales service", "glasses service after buy",
+      "can i get nose pad change", "screw fix", "do you fix nose pads", "tightening screws"  
+    ],
+    "answer": "Yes! We provide:\n• Frame adjustments at all OWNDAYS outlets in Singapore.\n• Professional lens cleaning using ultrasonic cleaners.\n• Nose pad replacement.\n• Screw tightening/replacement.\nJust approach our friendly staff for assistance."
+  }
+] 
+

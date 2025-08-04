@@ -1,0 +1,21 @@
+# Virtual environments
+tts-env/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Compiled files
+*.pyo
+*.pyd
+
+# Build/Distribution files
+*.egg-info/
+dist/
+build/
+
+# Environment variables
+.env
+.Python
