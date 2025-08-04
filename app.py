@@ -19,6 +19,8 @@ import requests
 import json
 import re
 import string
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
 
 from TTS.api import TTS
 from TTS.tts.configs.xtts_config import XttsConfig
