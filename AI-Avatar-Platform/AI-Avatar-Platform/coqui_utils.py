@@ -1,3 +1,4 @@
+
 """
 coqui_utils.py (For Audio Generation) ~ XTTS version
 
@@ -64,8 +65,9 @@ def punctuate_text(text: str) -> str:
 
 # XTTS Setup
 tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2")
-tts.to("cuda")
-tts.synthesizer.compute_type = "float16"
+tts.to("cpu")
+#tts.synthesizer.compute_type = "float16"
+tts.synthesizer.compute_type = "float32"
 
 client_voice_path = "client_voice/recording.wav"
 

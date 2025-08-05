@@ -138,8 +138,8 @@ tensorboard-data-server==0.7.2
 thinc==8.3.4
 threadpoolctl==3.6.0
 tokenizers==0.15.2
-torch==2.1.2+cu121
-torchaudio==2.1.2+cu121
+torch==2.1.2
+torchaudio==2.1.2
 tqdm==4.67.1
 trainer==0.0.36
 transformers==4.36.2
