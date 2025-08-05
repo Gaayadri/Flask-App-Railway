@@ -1,6 +1,7 @@
 # Virtual environments
-tts-env/
+venv/
 .venv/
+tts-env/
 
 # Python cache
 __pycache__/
@@ -19,3 +20,12 @@ build/
 # Environment variables
 .env
 .Python
+
+# macOS system files
+.DS_Store
+
+# VSCode settings (optional, if you use VSCode)
+.vscode/
+
+# Audio or generated files (optional)
+*.wav
