@@ -29,3 +29,5 @@ build/
 
 # Audio or generated files (optional)
 *.wav
+!client_voice/*.wav
+
