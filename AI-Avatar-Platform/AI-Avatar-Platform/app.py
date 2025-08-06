@@ -5,8 +5,6 @@ Purpose:
 Flask backend for 2D AI Avatar Platform with:
 - Coqui TTS audio generation
 - Scripted Q&A with Ollama fallback
-- Ngrok integration
-- Full-body avatar image serving
 """
 
 from flask import Flask, jsonify, request, send_file
@@ -27,6 +25,7 @@ from TTS.tts.configs.xtts_config import XttsConfig
 from TTS.tts.models.xtts import XttsAudioConfig, XttsArgs
 from TTS.config.shared_configs import BaseDatasetConfig
 from textwrap import wrap
+from faster_whisper import WhisperModel
 
 import torchaudio
 import torch
@@ -43,26 +42,11 @@ import torch
 load_dotenv()
 audio_dir = os.getenv("AUDIO_OUTPUT_DIR", "static/audio")
 
-# Load model once
-from faster_whisper import WhisperModel
 #whisper_model = WhisperModel("base")  # or "small", "medium", "large"
 whisper_model = WhisperModel("base", compute_type="int8", device="cpu")
 
-
 # Initialize Flask app
 app = Flask(__name__, static_url_path='/static', static_folder='static')
-ngrok_url = None
-
-def fetch_ngrok_url():
-    """Fetch ngrok public URL if available"""
-    try:
-        res = requests.get("http://127.0.0.1:4040/api/tunnels")
-        tunnels = res.json().get("tunnels", [])
-        return next((t["public_url"] for t in tunnels if t["proto"] == "https"), None)
-    except Exception as e:
-        print(f"⚠️ Ngrok error: {str(e)}")
-        return None
-
 
 @app.route("/")
 def index():
@@ -71,21 +55,12 @@ def index():
         "status": "running"
     })
 
-
-@app.route("/ngrok-url", methods=["GET"])
-def get_ngrok_url():
-    global ngrok_url
-    ngrok_url = ngrok_url or fetch_ngrok_url()
-    return jsonify({"url": ngrok_url}) if ngrok_url else jsonify({"error": "Ngrok unavailable"}), 500
-
-
 @app.route("/generate-audio", methods=["POST"])
 def generate_audio():
     """Generate speech audio from text"""
     data = request.get_json()
     if not data or "text" not in data:
         return jsonify({"error": "Text required"}), 400
-
 
     try:
         text = data["text"]
@@ -94,18 +69,15 @@ def generate_audio():
         if not synthesize_speech(text, output_path):
             return jsonify({"error": "TTS failed"}), 500
 
-
-        if request.args.get('download') == 'true':
-            return send_file(output_path, mimetype="audio/wav")
-
+        # if request.args.get('download') == 'true':
+        #     return send_file(output_path, mimetype="audio/wav")
 
         return jsonify({
-            "audio_url": f"{ngrok_url or ''}/static/audio/response.wav",
+             "audio_url": f"/static/audio/response.wav",
             "text_sample": text[:100]
         })
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
 
 # Scripted Q&A System
 # Replace the current qa_data loading block with:
@@ -119,8 +91,6 @@ try:
     print(f"✅ Loaded {len(qa_data)} Q&A pairs from {qa_file}")
 except Exception as e:
     print(f"❌ Critical: Failed to load Q&A data: {str(e)}")
-    # Consider exiting if Q&A data is essential
-    # sys.exit(1)
 
 def normalize(text):
     """Lowercase, strip, remove punctuation and multiple spaces"""
@@ -266,7 +236,7 @@ def scripted_response():
         print(f"[🎤 XTTS audio]: {output_path}")
         return jsonify({
             "response": response_text,
-            "audio_path": f"{ngrok_url or ''}/static/audio/response.wav",
+            "audio_path": f"/static/audio/response.wav",
             "source": source,
             "needs_tts": True
         })
@@ -284,12 +254,10 @@ def transcribe_audio():
     if 'file' not in request.files:
         return jsonify({"error": "No audio file uploaded"}), 400
 
-
     file = request.files['file']
     os.makedirs("static/audio", exist_ok=True)  # ensure folder exists
     file_path = os.path.join("static/audio", file.filename)
     file.save(file_path)
-
 
     try:
         segments, info = whisper_model.transcribe(file_path, language="en")
@@ -303,7 +271,6 @@ def transcribe_audio():
 def normalize_text(text):
     return re.sub(r'[^a-z0-9]', '', text.lower())  # Removes punctuation and upper/lower case differences
 
-
 # **Troubleshooting for ollama generation**
 @app.route("/generate-cloned-voice", methods=["POST"])
 def generate_cloned_voice():
@@ -311,9 +278,6 @@ def generate_cloned_voice():
     text = data.get("text", "").strip()
     if not text:
         return jsonify({"error": "Text is required"}), 400
-
-    # *Normalize input for consistent hashing
-    # fallback_text = "Sorry I don't have the information, please contact customer service for further assistance."
 
     # Normal XTTS voice generation — no caching
     output_path = os.path.join("static/audio", "response.wav")
@@ -349,30 +313,20 @@ def fallback_ollama():
         # 3. Return both audio path and text
         return jsonify({
             "response": llm_response,
-            "audio_path": f"{ngrok_url or ''}/static/audio/response.wav"
+            "audio_path": f"/static/audio/response.wav"
         })
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
 
 @app.route("/fullbody-avatar", methods=["GET"])
 def serve_avatar():
     """Serve the avatar image"""
     return send_file("static/image/full_body_avatar.png", mimetype="image/png")
 
-
 if __name__ == '__main__':
     from flask_cors import CORS
     CORS(app)  # Enable CORS
-   
-    # Initialize ngrok URL
-    ngrok_url = fetch_ngrok_url()
-    if ngrok_url:
-        print(f"\n🔗 Ngrok URL: {ngrok_url}")
-        print(f"🔊 Audio endpoint: {ngrok_url}/generate-audio")
-    else:
-        print("⚠️ Ngrok not detected - localhost only")
    
    #app.run(host="0.0.0.0", port=5000, debug=True)
     app.run(host="0.0.0.0", port=5000, debug=False, use_reloader=False)
