@@ -158,34 +158,81 @@ def index():
     '''
     return html
 
+# @app.route("/chat", methods=["POST"])
+# def chat():
+#     """Handle chat requests with Android TTS"""
+#     try:
+#         data = request.get_json()
+#         user_input = data.get("text", "").strip()
+        
+#         if not user_input:
+#             return jsonify({"error": "Empty input"}), 400
+        
+#         print(f"📩 User: {user_input}")
+        
+#         # Find scripted response
+#         response = find_scripted_response(user_input)
+        
+#         if not response:
+#             response = "Sorry, I don't have information about that. Please contact customer service for assistance."
+        
+#         print(f"🤖 Response: {response}")
+        
+#         # Use Android TTS
+#         android_tts(response, None)
+        
+#         return jsonify({
+#             "response": response,
+#             "source": "scripted" if find_scripted_response(user_input) else "fallback"
+#         })
+        
+#     except Exception as e:
+#         print(f"❌ Chat error: {e}")
+#         return jsonify({
+#             "error": str(e),
+#             "response": "System error occurred"
+#         }), 500
+import requests  # put this at the top of your file with other imports
+
 @app.route("/chat", methods=["POST"])
 def chat():
-    """Handle chat requests with Android TTS"""
+    """Handle chat requests with Android TTS by forwarding to VPS backend"""
     try:
         data = request.get_json()
         user_input = data.get("text", "").strip()
-        
+
         if not user_input:
             return jsonify({"error": "Empty input"}), 400
-        
+
         print(f"📩 User: {user_input}")
-        
-        # Find scripted response
-        response = find_scripted_response(user_input)
-        
-        if not response:
-            response = "Sorry, I don't have information about that. Please contact customer service for assistance."
-        
+
+        VPS_BACKEND_URL = "https://31.97.189.23/chat"  # Existing backend endpoint
+
+        try:
+            r = requests.post(
+                VPS_BACKEND_URL,
+                json={"text": user_input},
+                timeout=10,
+                verify=False  # set to True if VPS has a valid SSL certificate
+            )
+            if r.status_code == 200:
+                backend_data = r.json()
+                response = backend_data.get("response", "No response from backend")
+            else:
+                response = f"Backend error: {r.status_code}"
+        except Exception as e:
+            response = f"Error connecting to backend: {e}"
+
         print(f"🤖 Response: {response}")
-        
+
         # Use Android TTS
         android_tts(response, None)
-        
+
         return jsonify({
             "response": response,
-            "source": "scripted" if find_scripted_response(user_input) else "fallback"
+            "source": "vps_backend"
         })
-        
+
     except Exception as e:
         print(f"❌ Chat error: {e}")
         return jsonify({
